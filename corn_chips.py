@@ -4,7 +4,7 @@ corn chips!
 import consts
 from colors import ColorWheel
 
-NUM_COLS = 140
+NUM_COLS = 100
 SIZE = consts.WIDTH / NUM_COLS
 
 # Rules used to generate cellular automata
@@ -16,13 +16,13 @@ RULES = [
     [0, 1, 1, 0, 1, 0, 1, 0],
     [1, 0, 1, 0, 0, 1, 0, 1],   # Cool space pyramid thing
 ]
-RULE = RULES[-1]
+RULE = RULES[-3]
 
 def corn_chips(draw):
     color_wheel = ColorWheel(3, 0.8, 0.8)
     height = 0
     row = [0 for _ in range(NUM_COLS)]
-    row[10] = row[39] = 1
+    row[0] = row[-1] = 1
 
     while height * SIZE < consts.HEIGHT:
         color_wheel.rotate(0.015)

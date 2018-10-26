@@ -24,7 +24,7 @@ def main():
     draw = ImageDraw.Draw(img)
     depth = 0
     corn_chips(draw)
-    # fuzzer(draw)
+    fuzzer(draw)
     # img = img.rotate(180)
     img.save('test.png', 'PNG')
 
